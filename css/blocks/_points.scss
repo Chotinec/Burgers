@@ -1,0 +1,31 @@
+.points {
+  position: fixed;
+  top: 13.8%;
+  left:95%;
+}
+
+.points__link {
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.points__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 5px;
+  border-radius: 50%; 
+  transition: 1s;
+
+  &:hover {
+    border: 1px solid #ffffff; 
+  }
+}
+
+.points__item--active {
+  border: 1px solid #ffffff; 
+}

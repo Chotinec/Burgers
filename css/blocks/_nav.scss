@@ -1,0 +1,35 @@
+.nav {
+  margin-top: 17px;
+}
+
+.nav__list {
+  color: #ffffff;
+}
+
+.nav__item {
+  display: inline-block;
+  position: relative;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding-left: 19px;
+  padding-right: 12.5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #ffffff;
+  }
+
+  &:first-child::before {
+    display: none;
+    padding-left: 0;
+  }
+}
