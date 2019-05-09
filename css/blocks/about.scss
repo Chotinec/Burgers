@@ -1,0 +1,20 @@
+.about {
+  display: flex;
+}
+
+.about__right {
+  margin-top: 142px;
+  width: 406px;
+}
+
+.about__pic {
+  margin-right: 15px;
+}
+
+.about__description {
+  font-weight: 400;
+  font-size: 65px;
+  @include lifehack();
+  line-height: 1;
+  color: #fff;
+}

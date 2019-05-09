@@ -1,0 +1,18 @@
+.home {
+  background: url('../images/background/home_background.png') center center / cover no-repeat;
+  position: relative;
+}
+
+.home__content {
+  flex: .8;
+  display: flex;
+  align-items: center;
+}
+
+.home__container {
+  justify-content: flex-start;
+}
+
+.home--title {
+  margin-bottom: 23px;
+}

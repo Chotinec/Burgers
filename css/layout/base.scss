@@ -4,10 +4,13 @@ body {
 }
 
 body {
+ @include ubuntu();
   font-family: "Ubuntu", serif, Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.42;
+  color: $black;
+  font-size: 16px;
 }
 
 * {
@@ -56,6 +59,11 @@ p {
   padding: 0;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 .visuallyHidden {
   position: absolute;
   overflow: hidden;
@@ -68,51 +76,27 @@ p {
 }
 
 .wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 940px + 20px;
+  min-height: 100%;
   overflow: hidden;
-  min-width: 1104px;
-  // min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .container {
+  width: 940px;
   margin: 0 auto;
-}
-
-.page-content {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
 .section {
   position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100vh;
   min-height: 650px;
 }
-
-.section-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-section {
-  @extend .section-center;
-  @extend .section;
-  background-image: url('../../images/background/home_background.png');
-}
-
-.description-section {
-  @extend .section-center;
-  @extend .section;
-  background-image: url('../../images/background/description_background.png');
-}
-
-// .comments-section {
-//   @extend .section;
-// }
 
 .btn-custom {
   text-transform: uppercase;

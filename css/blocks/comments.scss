@@ -1,0 +1,14 @@
+// .comments  {
+//   width: 100%;
+// }
+
+.comments__list {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comments__item {
+  width: 25%;
+  height: 50%; 
+}

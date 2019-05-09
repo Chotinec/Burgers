@@ -1,1 +1,1 @@
-## Hotinec Artiom project on LoftSchool.
+## Hotinec Artiom, LoftSchool project.

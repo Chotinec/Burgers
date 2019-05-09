@@ -1,0 +1,42 @@
+.comment {
+  position: relative;
+  filter: grayscale(100%);
+
+  &:hover {
+    .comment__hover {
+      opacity: 1;
+    }
+  }
+}
+
+.comment__avatar {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.comment__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(#000, .8);
+  padding: 45px 5% 10px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.comment__title {
+  @include gagalin();
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.comment__text {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 17px;
+}
