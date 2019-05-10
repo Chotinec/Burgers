@@ -5,11 +5,16 @@
   text-transform: uppercase;
   color: #fff;
   font-size: 13px;
-  font-weight: 500px;
+  font-weight: 500;
   display: inline-block;
   text-decoration: none;
+  transition: opacity .2s;
 
   &--black {
     background-color: #2f3234;
+  }
+
+  &:hover {
+    opacity: .8;
   }
 }

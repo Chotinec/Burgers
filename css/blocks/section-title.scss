@@ -1,7 +1,6 @@
 .section-title {
   font-size: 72px;
   @include  gagalin();
-  // margin-bottom: 23px;
   line-height: 1;
   color: $yellow;
 
@@ -11,5 +10,13 @@
 
   &--centered {
     text-align: center;
+  }
+
+  &--home {
+    margin-bottom: 23px;
+  }
+
+  &--description {
+    margin-bottom: 45px;
   }
 }
