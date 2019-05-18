@@ -1,0 +1,30 @@
+.social {
+  margin-top: 15px;
+  margin-bottom: 22px;
+}
+
+.social__item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: block;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  fill: #585858;
+
+  &:hover {
+    fill:#fff;
+  }
+}
+
+.social__svg {
+  width: 23px;
+  height: 20px;
+}

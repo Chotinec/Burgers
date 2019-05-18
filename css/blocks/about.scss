@@ -2,9 +2,13 @@
   display: flex;
 }
 
+.about__left, .about__right {
+  width: 48%;
+}
+
 .about__right {
   margin-top: 142px;
-  width: 406px;
+  // width: 406px;
 }
 
 .about__left {

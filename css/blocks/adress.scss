@@ -1,0 +1,26 @@
+.adress {
+  margin-top: 8px;
+}
+
+.adress__text {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.adress__phon-link {
+  color: #e45028;
+  font-weight: 700;
+}
+
+.adress__phone-pic {
+  width: 12px;
+  height: 11px;
+  fill:#e45028;
+  margin-right: 5px;
+}
+
+.adress__phone {
+  display: flex;
+  align-items: baseline;
+}

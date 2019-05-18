@@ -64,6 +64,18 @@ table {
   border-spacing: 0;
 }
 
+input,
+textarea {
+  outline: none;
+  border-radius: 5px;
+}
+
+input:focus,
+textarea:focus {
+  border:  1px solid #f9b43b;
+}
+
+
 .visuallyHidden {
   position: absolute;
   overflow: hidden;

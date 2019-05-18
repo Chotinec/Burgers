@@ -1,0 +1,70 @@
+.command {
+  background: url('../images/background/command_background.jpg') 50% no-repeat;
+  background-size: cover;
+	position: relative;
+
+  .section-title {
+		margin-bottom: 5%;
+	}
+}
+
+.command__block {
+  position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	background: rgba(#2f3234, .93);
+	padding: 5% 2% 0 7%;
+}
+
+.command-acco__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  
+  &:last-child {
+		margin-bottom: 0;
+  }
+  
+  &:last-child {
+		margin-bottom: 0;
+	}
+
+	&--active {
+		.command-acco__trigger {
+			color: $yellow;
+
+			&:before {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+}
+
+.command-acco__trigger {
+  display: flex;
+  align-items: center;
+  -webkit-box-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+
+  @include  gagalin;
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 5px solid #f9b43b;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-bottom-width: 0;
+    margin-right: 10px;
+  }
+}
+
