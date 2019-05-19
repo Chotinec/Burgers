@@ -1,3 +1,15 @@
+html {
+  font-size: 16px;
+
+  @include tablets {
+    font-size: 15px;
+  }
+
+  @include phones {
+    font-size: 13px;
+  }
+}
+
 html,
 body {
   height: 100%;
@@ -10,7 +22,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.42;
   color: $black;
-  font-size: 16px;
+  font-size: rem(16px);
 }
 
 * {
@@ -67,12 +79,12 @@ table {
 input,
 textarea {
   outline: none;
-  border-radius: 5px;
+  border-radius: rem(5px);
 }
 
 input:focus,
 textarea:focus {
-  border:  1px solid #f9b43b;
+  border:  rem(1px) solid #f9b43b;
 }
 
 
@@ -80,9 +92,9 @@ textarea:focus {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
+  height: rem(1px);
+  width: rem(1px);
+  margin: rem(-1px);
   padding: 0;
   border: 0;
 }
@@ -90,13 +102,14 @@ textarea:focus {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 940px + 20px;
+  // max-width: rem(940px) + rem(20px);
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  width: 940px;
+  max-width: rem(940px);
+  width: 95%; 
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -107,7 +120,7 @@ textarea:focus {
 .section {
   position: relative;
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 
 .btn-custom {
@@ -115,8 +128,8 @@ textarea:focus {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
   text-transform: uppercase;
-  border-radius: 4px;
+  border-radius: rem(4px);
 }

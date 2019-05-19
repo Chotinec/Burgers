@@ -4,13 +4,17 @@ $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 
-/* GENERAL */
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+//GENERAL
 @import './layout/normalize';
 @import './layout/fonts';
 @import './layout/mixins';
 @import './layout/base';
 
-/* BLOCKS */
+//BLOCKS
 @import './blocks/home';
 @import './blocks/header';
 @import './blocks/logo';

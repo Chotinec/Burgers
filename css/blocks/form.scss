@@ -2,10 +2,24 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+
+  @include tablets {
+    margin-left: 0;
+    flex-direction: column;
+    padding: 0 15%;
+  }
+
+  @include phones {
+    padding: 0;
+  }
 }
 
 .form__left, .form__right {
   width: 49%;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .form__wrap {
@@ -13,18 +27,22 @@
 }
 
 .form__content {
-  margin-top: 44px;
+  margin-top: rem(44px);
 }
 
 .form__row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 17px;
+  margin-bottom: rem(17px);
+
+  @include phones {
+    margin-bottom: rem(7px);
+  }
 }
 
 .form__row:last-child {
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
 }
 
 .form__field {
@@ -43,9 +61,13 @@
 
 .form__field-title {
   color: #ffffff;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
-  margin-bottom: 5px;
+  margin-bottom: rem(5px);
+
+  @include phones {
+    margin-bottom: rem(5px);
+  }
 }
 
 .form__field--textarea {
@@ -53,18 +75,18 @@
 }
 
 .form__input {
-  padding: 12px 21px;
-  height: 35px;
+  padding: rem(12px) rem(21px);
+  height: rem(35px);
   color: #2f3234;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
 }
 
 .form__textarea {
-  height: 109px;
-  padding: 11px 21px;
+  height: rem(109px);
+  padding: rem(11px) rem(21px);
   color: #2f3234;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
 }
 
@@ -74,7 +96,7 @@
 
 .form__radio-trigger {
   cursor: pointer;
-  margin-right: 16px;
+  margin-right: rem(16px);
   display: inline-block;
 }
 
@@ -83,65 +105,74 @@
 }
 
 .form__radio-custom {
-  margin-right: 2px;
+  margin-right: rem(2px);
   vertical-align: middle;
   position: relative;
   display: inline-block;
   background: #ccc;
-  width: 15px;
-  height: 15px;
+  width: rem(15px);
+  height: rem(15px);
   border-radius: 50%;
 }
 
 .form__check-custom {
-  margin-right: 2px;
+  margin-right: rem(2px);
   vertical-align: middle;
   position: relative;
   display: inline-block;
   background: #ccc;
-  width: 15px;
-  height: 15px;
+  width: rem(15px);
+  height: rem(15px);
 }
 
 input[type="checkbox"]:checked + .form__check-custom:before {
   content: "";
   display: block;
   position: absolute;
-  top: 2px;
-  right: 2px;
-  bottom: 2px;
-  left: 2px;
+  top: rem(2px);
+  right: rem(2px);
+  bottom: rem(2px);
+  left: rem(2px);
   background: url('../images/icons/ok.png') center center / cover no-repeat;;
 }
 
 .form__radio-title {
   color: #ffffff;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 5px;
+  margin-left: rem(5px);
 }
 
 input[type="radio"]:checked + .form__radio-custom:before {
   content: "";
   display: block;
   position: absolute;
-  top: 4px;
-  right: 4px;
-  bottom: 4px;
-  left: 4px;
+  top: rem(4px);
+  right: rem(4px);
+  bottom: rem(4px);
+  left: rem(4px);
   background: #e35028;
   border-radius: 50%;
 }
 
 .form__btns {
-  margin-top: 4px;
+  margin-top: rem(4px);
 }
 
 .form__cancel {
   color: #ffffff;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
-  margin-left: 20px;
+  margin-left: rem(20px);
+}
+
+.form__buttons {
+  @include phones {
+    .form__row {
+      justify-content: center;
+      margin-bottom: rem(17px);
+    }
+  }
 }

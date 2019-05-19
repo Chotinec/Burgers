@@ -1,9 +1,9 @@
 .arrow {
   display: block;
-  width: 29px;
-  height: 14px;
+  width: rem(29px);
+  height: rem(14px);
   position: absolute;
-  bottom: 40px;
+  bottom: rem(40px);
   left: 50%;
   transform: translateX(-50%);
 

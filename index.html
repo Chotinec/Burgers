@@ -66,14 +66,16 @@
 
           <!--ABOUT-->
           <div class="about">
-            <div class="about__left">
-              <div class="about__pic">
-                <img src="./images/burger.png" alt="" class="about__img">
+            <div class="about__content">
+              <div class="about__left">
+                <div class="about__pic">
+                  <img src="./images/burger.png" alt="" class="about__img">
+                </div>
               </div>
-            </div>
-            <div class="about__right">
-              <h1 class="section-title section-title--home">Мы делаем</h1>
-              <div class="about__description">натуральные бургеры</div>
+              <div class="about__right">
+                <h1 class="section-title section-title--home">Мы делаем</h1>
+                <div class="about__description">натуральные бургеры</div>
+              </div>
             </div>
           </div>
         </div>
@@ -96,9 +98,11 @@
           лучшие</h2>
         <ul class="description__list">
           <li class="description__item feature">
-            <svg class="feature__logo feature--meat">
-              <use xlink:href="./images/icons/svg/sprite.svg#meat" />
-            </svg>
+            <div class="features__icon">
+              <svg class="feature__logo feature--meat">
+                <use xlink:href="./images/icons/svg/sprite.svg#meat" />
+              </svg>
+            </div>
             <div class="feature__desc">
               <h3 class="feature__title">100% свежее мясо</h3>
               <div class="feature__text">
@@ -111,9 +115,11 @@
             </div>
           </li>
           <li class="description__item feature">
-            <svg class="feature__logo feature--handmade">
-              <use xlink:href="./images/icons/svg/sprite.svg#hand" />
-            </svg>
+            <div class="features__icon">
+              <svg class="feature__logo feature--handmade">
+                <use xlink:href="./images/icons/svg/sprite.svg#hand" />
+              </svg>
+            </div>
             <div class="feature__desc">
               <h3 class="feature__title">Ручная сборка</h3>
               <div class="feature__text">
@@ -127,9 +133,11 @@
             </div>
           </li>
           <li class="description__item feature">
-            <svg class="feature__logo featuree--leaf">
-              <use xlink:href="./images/icons/svg/sprite.svg#leaf" />
-            </svg>
+            <div class="features__icon">
+              <svg class="feature__logo featuree--leaf">
+                <use xlink:href="./images/icons/svg/sprite.svg#leaf" />
+              </svg>
+            </div>
             <div class="feature__desc">
               <h3 class="feature__title">Натуральные ингредиенты</h3>
               <div class="feature__text">
@@ -465,39 +473,39 @@
                   <textarea name="text-message" class="form__textarea" placeholder=""></textarea>
                 </label>
               </div>
-              <div class="form__row">
-                <div class="form__field form__field--long">
-                  <div class="form__radio">
-                    <label for="change" class="form__radio-trigger">
-                      <input type="radio" id="change" name="photo" class="visuallyHidden">
-                      <span class="form__radio-custom"></span>
-                      <span class="form__radio-title">Потребуется сдача</span>
-                    </label>
-                    <label for="card" class="form__radio-trigger">
-                      <input type="radio" id="card" name="photo" class="visuallyHidden">
-                      <span class="form__radio-custom"></span>
-                      <span class="form__radio-title">Оплата по карте</span>
+              <div class="form__buttons">
+                <div class="form__row">
+                    <div class="form__radio">
+                      <label for="change" class="form__radio-trigger">
+                        <input type="radio" id="change" name="photo" class="visuallyHidden">
+                        <span class="form__radio-custom"></span>
+                        <span class="form__radio-title">Потребуется сдача</span>
+                      </label>
+                      <label for="card" class="form__radio-trigger">
+                        <input type="radio" id="card" name="photo" class="visuallyHidden">
+                        <span class="form__radio-custom"></span>
+                        <span class="form__radio-title">Оплата по карте</span>
+                      </label>
+                    </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__checkbox">
+                    <label for="check" class="form__check-trigger">
+                      <input type="checkbox" id="check" name="photo" class="visuallyHidden">
+                      <span class="form__check-custom"></span>
+                      <span class="form__radio-title">Не перезванивать</span>
                     </label>
                   </div>
                 </div>
-              </div>
-              <div class="form__row">
-                <div class="form__checkbox">
-                  <label for="check" class="form__check-trigger">
-                    <input type="checkbox" id="check" name="photo" class="visuallyHidden">
-                    <span class="form__check-custom"></span>
-                    <span class="form__radio-title">Не перезванивать</span>
+                <div class="form__row">
+                  <label for="send-btn" class="form__send-btn">
+                    <button class="visuallyHidden" type="submit" id="send-btn">
+                      Заказать
+                    </button>
+                    <span class="btn">Заказать</span>
+                    <span class="form__cancel">Очистить</span>
                   </label>
                 </div>
-              </div>
-              <div class="form__btns">
-                <label for="send-btn" class="form__send-btn">
-                  <button class="visuallyHidden" type="submit" id="send-btn">
-                    Заказать
-                  </button>
-                  <span class="btn">Заказать</span>
-                  <span class="form__cancel">Очистить</span>
-                </label>
               </div>
             </div>
           </div>
@@ -509,7 +517,7 @@
     <section class="section contacts">
       <footer class="footer">
         <div class="container footer__container">
-          <div class="footer__left">
+          <div class="footer__col">
             <address class="adress">
               <div class="adress__text">
                 Санкт-Петербург, ул.Бабушкина, д.12/1, 15
@@ -522,7 +530,7 @@
               </div>
             </address>
           </div>
-          <div class="footer__right">
+          <div class="footer__col">
             <ul class="social">
               <li class="social__item">
                 <a href="" class="social__link">

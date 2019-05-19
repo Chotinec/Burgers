@@ -1,12 +1,19 @@
 .social {
-  margin-top: 15px;
-  margin-bottom: 22px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: rem(25px);
+  margin-bottom: rem(22px);
+
+  @include phones {
+    margin-bottom: rem(18px);
+    justify-content: center;
+  }
 }
 
 .social__item {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 12px;
+  margin-right: rem(15px);
 
   &:last-child {
     margin-right: 0;
@@ -25,6 +32,6 @@
 }
 
 .social__svg {
-  width: 23px;
-  height: 20px;
+  width: rem(23px);
+  height: rem(20px);
 }

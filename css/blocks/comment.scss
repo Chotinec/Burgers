@@ -22,21 +22,41 @@
   right: 0;
   bottom: 0;
   background: rgba(#000, .8);
-  padding: 45px 5% 10px;
+  padding: 5% 5% 0;
   color: #fff;
   opacity: 0;
   transition: opacity .3s;
+
+  @include tablets {
+    text-align: center;
+    padding: 0 6%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .comment__title {
   @include gagalin();
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: rem(23px);
+
+  @include tablets {
+    margin-bottom: 10px;
+  }
+
+  @include phones {
+    font-size: rem(20px);
+  }
 }
 
 .comment__text {
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
-  margin-bottom: 17px;
+  margin-bottom: rem(12px);
+
+  @include phones {
+    display: none;
+  }
 }

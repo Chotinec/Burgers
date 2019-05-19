@@ -10,14 +10,18 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.footer__left {
+.footer__col {
   width: 50%;
-}
-
-.footer__right {
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
+ 
+  @include phones {
+    width: 100%;
+    text-align: center;
+  }
 }

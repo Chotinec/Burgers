@@ -4,13 +4,23 @@
 
 .description__list {
   display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .description__item {
-flex: 1;
-  margin-right: 36px;
+  flex: 1;
+  margin-right: rem(36px);
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include phones {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: rem(25px);
   }
 }
