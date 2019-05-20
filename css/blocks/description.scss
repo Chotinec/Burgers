@@ -1,0 +1,16 @@
+.description {
+  background: url('../images/background/description_background.jpg') center center / cover no-repeat;
+}
+
+.description__list {
+  display: flex;
+}
+
+.description__item {
+flex: 1;
+  margin-right: 36px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

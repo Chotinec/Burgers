@@ -1,0 +1,38 @@
+.nav__list {
+  display: flex;
+  align-items: center;
+  // margin-top: 6px;
+}
+
+.nav__item {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 15px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.nav__link {
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 13px;
+  color: #ffffff; 
+  text-transform: uppercase;
+}
+

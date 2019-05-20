@@ -1,0 +1,33 @@
+.points {
+  position: fixed;
+  top: 90px;
+  right: 52px;
+}
+
+.points__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 5px;
+  border-radius: 50%; 
+  transition: 1s;
+
+  &:hover {
+    border: 1px solid #ffffff; 
+  }
+
+  &:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  &--active {
+    border: 1px solid #ffffff; 
+    border-radius: 50%; 
+  }
+}

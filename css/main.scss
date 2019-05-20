@@ -1,0 +1,26 @@
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+/* GENERAL */
+@import './layout/normalize';
+@import './layout/fonts';
+@import './layout/mixins';
+@import './layout/base';
+
+/* BLOCKS */
+@import './blocks/home';
+@import './blocks/header';
+@import './blocks/logo';
+@import './blocks/nav';
+@import './blocks/btn';
+@import './blocks/section-title';
+@import './blocks/arrow';
+@import './blocks/about';
+@import './blocks/features';
+@import './blocks/points';
+@import './blocks/description';
+@import './blocks/comments';
+@import './blocks/comment';
