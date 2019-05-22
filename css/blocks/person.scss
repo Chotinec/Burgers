@@ -1,0 +1,53 @@
+
+.person {
+  display: flex;
+  // display: none;
+  width: 100%;
+  height: 100%;
+  padding-left: rem(17px);
+  // padding-bottom: rem(25px);
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+}
+
+.person-acco__img {
+  width: rem(100px);
+	height: rem(100px);
+  object-fit: cover;
+  background-position: center;
+  border-radius: 50%;
+  background-image: url('../images/team/Richard_D.png');
+}
+
+.person__avatar, .person__description {
+  float: left;
+}
+
+.person__avatar {
+	text-align: center;
+
+	@include tablets {
+		margin-bottom: rem(15px);
+	}
+}
+
+.person__description {
+  width:70%;
+  color: #ffffff;
+  font-size: rem(14px);
+  margin-left: rem(21px);
+  width: rem(208px);
+}
+
+.person__title {
+  font-weight: 700;
+}
+
+.person__text {
+  font-weight: 300;
+  padding-top: rem(17px);
+}

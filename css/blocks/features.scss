@@ -4,39 +4,54 @@
   align-items: center;
 }
 
+.features__icon {
+  margin-bottom: rem(30px);
+
+  @include phones {
+    margin-right: rem(20px);
+    width: 30%;
+  }
+}
+
 .feature__logo {
-  margin-bottom: 30px;
+  width: 90%;
+  height: rem(100px);
+
+  @include phones {
+    position: static;
+    transform: none;
+  }
 }
 
 .feature--meat {
-  width: 97px; 
-  height: 89px;
-  background: url('../images/sprites/description_sprites.png') -10px -10px;
+  fill:#E35028;
 }
 
 .feature--handmade {
-  width: 73px; 
-  height: 85px;
-  background: url('../images/sprites/description_sprites.png') -10px -119px;
+  fill: #F9B43B;
 }
 
 .featuree--leaf {
-  width: 88px;
-  height: 75px;
-  background: url('../images/sprites/description_sprites.png') -127px -10px;
+  fill: #8BC03F;
 }
 
 .feature__desc {
   text-align: center;
+
+  @include phones {
+    text-align: left;
+    display: block;
+    width: 70%;
+  }
 }
 
 .feature__title {
   @include lifehack();
-  font-size: 24px;
-  font-weight: 500px;
-  margin-bottom: 18px;
+  font-size: rem(24px);
+  font-weight: rem(500px);
+  margin-bottom: rem(18px);
 }
 
 .feature__text {
-  font-size: 14px; 
+  font-size: rem(14px); 
 }

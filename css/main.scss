@@ -4,13 +4,17 @@ $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 
-/* GENERAL */
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+//GENERAL
 @import './layout/normalize';
 @import './layout/fonts';
 @import './layout/mixins';
 @import './layout/base';
 
-/* BLOCKS */
+//BLOCKS
 @import './blocks/home';
 @import './blocks/header';
 @import './blocks/logo';
@@ -24,3 +28,12 @@ $red: #e35028;
 @import './blocks/description';
 @import './blocks/comments';
 @import './blocks/comment';
+@import './blocks/contacts';
+@import './blocks/footer';
+@import './blocks/social';
+@import './blocks/adress';
+@import './blocks/order';
+@import './blocks/form';
+@import './blocks/menu';
+@import './blocks/command';
+@import './blocks/person';

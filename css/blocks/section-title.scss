@@ -1,5 +1,5 @@
 .section-title {
-  font-size: 72px;
+  font-size: rem(72px);
   @include  gagalin();
   line-height: 1;
   color: $yellow;
@@ -13,10 +13,18 @@
   }
 
   &--home {
-    margin-bottom: 23px;
+    margin-bottom: rem(23px);
   }
 
   &--description {
-    margin-bottom: 45px;
+    margin-bottom: rem(45px);
+  }
+
+  &--color-white {
+    color:#fff;
+  }
+
+  @include phones {
+    font-size: rem(50px);
   }
 }
