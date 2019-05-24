@@ -511,7 +511,9 @@ textarea:focus {
 
 .nav__list {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center; }
 
 .nav__item {
   margin-right: 1rem;
@@ -597,7 +599,7 @@ textarea:focus {
       padding: 0 15%; } }
 
 .about__left, .about__right {
-  width: 49%; }
+  width: 100%; }
   @media screen and (max-width: 768px) {
     .about__left, .about__right {
       float: none;
@@ -683,7 +685,8 @@ textarea:focus {
 .points {
   position: fixed;
   top: 5.625rem;
-  right: 3.25rem; }
+  right: 3.25rem;
+  z-index: 100; }
 
 .points__link {
   display: flex;
