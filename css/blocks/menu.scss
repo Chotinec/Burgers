@@ -14,7 +14,6 @@
   right: 0;
   top: 0;
   bottom: 0;
-  // flex: 1;
 }
 
 .menu-acco__item {
@@ -84,6 +83,7 @@
   background-color: rgba(0, 0, 0, 0.75);
   overflow: hidden;
   transition: max-width 1s;
+  flex: 1;
 }
 
 .menu-acco__text {

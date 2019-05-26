@@ -1,0 +1,168 @@
+.burgers {
+  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+}
+
+.burgers__content {
+  display: flex;
+  position: relative;
+
+  @include tablets {
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+.burgers__left {
+  width: 55%;
+}
+
+.burgers__right  {
+  width: 45%;
+}
+
+.burgers__left, .burgers__right {
+
+  @include tablets {
+    width: 100%;
+    text-align: center;
+  }
+
+  @include phones {
+    padding: 0;
+  }
+}
+
+.burgers__left {
+  position: relative;
+}
+
+.burgers__pic {
+  margin-top: 6%;
+  position: relative;
+}
+
+.burgers__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.burgers__description {
+  margin-top: 40px;
+  color: #ffffff;
+  font-size: rem(14px);
+  font-weight: 300;
+  line-height: rem(23.97px);
+}
+
+.burgers__compound {
+  position: absolute;
+  top: -10%;
+  left: 6%;
+  width: rem(90px);
+  height: rem(90px);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #e35028;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0.5;
+  transition: .6s;
+
+  @include tablets {
+    top: -5%;
+    left: 5%;
+  }
+}
+
+.burgers__compound-svg {
+  width: rem(46px);
+  height: rem(46px);
+  fill: #fff;
+}
+
+.burgers__nutrition-svg {
+  width: rem(60px);
+  height: rem(60px);
+  fill: #fff;
+}
+
+.burgers__compound-text, .burgers__nutrition-text {
+  color: #ffffff;
+  @include gagalin();
+  font-size: rem(14px);
+  font-weight: 400;
+}
+
+.burggers__nutrition {
+  position: absolute;
+  bottom: -10%;
+  left: 5%;
+
+  @include tablets {
+    position: absolute;
+    top: 5%;
+    right:0%;
+  }
+}
+
+.burggers__nutrition-wrapper {
+  font-size: rem(20px);
+  @include gagalin();
+  color: #fff;
+  position: relative;
+  opacity: 0.5;
+  padding-left: rem(12px);
+}
+
+.burgers__nutrition-number {
+   position: absolute;
+   top: 30%;
+   left: 35%;
+}
+
+.burgers__nutrition-text {
+  position: absolute;
+  top: 85%;
+  left: 35%;
+}
+
+.burgers__price {
+  color: #e35028;
+  @include gagalin();
+  font-size: rem(30px);
+  margin-top: rem(10px);
+}
+
+.burgers__price--big {
+  font-size: rem(72px);
+}
+
+.burgers__button {
+  @include ubuntu(500);
+  font-size: rem(13px);
+  margin-left: rem(15px);
+}
+
+.burgers__arrow-left, .burgers__arrow-right {
+  position: absolute;
+  width: rem(26px);
+  height: rem(39px);
+  fill: #fff;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.burgers__arrow-left {
+  top: 45%;
+  left: -1.5%;
+  transform: rotate(90deg);
+}
+
+.burgers__arrow-right {
+  top: 45%;
+  right: -9%;
+  transform: rotate(-90deg);
+}
