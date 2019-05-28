@@ -11,14 +11,18 @@
     padding-left: 10%;
     padding-right: 10%;
   }
+
+  @include phones {
+    padding: 0;
+  }
 }
 
 .burgers__left {
-  width: 55%;
+  width: 53%;
 }
 
 .burgers__right  {
-  width: 45%;
+  width: 43%;
 }
 
 .burgers__left, .burgers__right {
@@ -35,16 +39,26 @@
 
 .burgers__left {
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.burgers__right {
+  padding-top: 5%;
+  padding-left: 2%;
 }
 
 .burgers__pic {
-  margin-top: 6%;
-  position: relative;
+  padding-top: 10%;
 }
 
 .burgers__img {
   max-width: 100%;
   max-height: 100%;
+
+  @include phones {
+    max-width: 80%;
+  }
 }
 
 .burgers__description {
@@ -57,7 +71,7 @@
 
 .burgers__compound {
   position: absolute;
-  top: -10%;
+  top: 0;
   left: 6%;
   width: rem(90px);
   height: rem(90px);
@@ -73,7 +87,7 @@
 
   @include tablets {
     top: -5%;
-    left: 5%;
+    left: 0%;
   }
 }
 
@@ -98,12 +112,12 @@
 
 .burggers__nutrition {
   position: absolute;
-  bottom: -10%;
+  bottom: 0%;
   left: 5%;
 
   @include tablets {
     position: absolute;
-    top: 5%;
+    top: -5%;
     right:0%;
   }
 }
@@ -115,6 +129,12 @@
   position: relative;
   opacity: 0.5;
   padding-left: rem(12px);
+
+  @include tablets {
+    position: absolute;
+    top: 0%;
+    right:5%;
+  }
 }
 
 .burgers__nutrition-number {
@@ -146,23 +166,23 @@
   margin-left: rem(15px);
 }
 
-.burgers__arrow-left, .burgers__arrow-right {
-  position: absolute;
-  width: rem(26px);
-  height: rem(39px);
+.burgers__arrow-img {
+  height: rem(12px);
   fill: #fff;
-  z-index: 10;
-  cursor: pointer;
 }
 
 .burgers__arrow-left {
-  top: 45%;
-  left: -1.5%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
   transform: rotate(90deg);
 }
 
 .burgers__arrow-right {
-  top: 45%;
-  right: -9%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0%;
   transform: rotate(-90deg);
 }

@@ -586,8 +586,7 @@ textarea:focus {
   display: flex; }
   @media screen and (max-width: 768px) {
     .about__content {
-      flex-direction: column;
-      padding: 0 15%; } }
+      flex-direction: column; } }
 
 .about__left, .about__right {
   width: 100%; }
@@ -1324,12 +1323,15 @@ input[type="radio"]:checked + .form__radio-custom:before {
       flex-direction: column;
       padding-left: 10%;
       padding-right: 10%; } }
+  @media screen and (max-width: 480px) {
+    .burgers__content {
+      padding: 0; } }
 
 .burgers__left {
-  width: 55%; }
+  width: 53%; }
 
 .burgers__right {
-  width: 45%; }
+  width: 43%; }
 
 @media screen and (max-width: 768px) {
   .burgers__left, .burgers__right {
@@ -1340,15 +1342,23 @@ input[type="radio"]:checked + .form__radio-custom:before {
     padding: 0; } }
 
 .burgers__left {
-  position: relative; }
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.burgers__right {
+  padding-top: 5%;
+  padding-left: 2%; }
 
 .burgers__pic {
-  margin-top: 6%;
-  position: relative; }
+  padding-top: 10%; }
 
 .burgers__img {
   max-width: 100%;
   max-height: 100%; }
+  @media screen and (max-width: 480px) {
+    .burgers__img {
+      max-width: 80%; } }
 
 .burgers__description {
   margin-top: 40px;
@@ -1359,7 +1369,7 @@ input[type="radio"]:checked + .form__radio-custom:before {
 
 .burgers__compound {
   position: absolute;
-  top: -10%;
+  top: 0;
   left: 6%;
   width: 5.625rem;
   height: 5.625rem;
@@ -1375,7 +1385,7 @@ input[type="radio"]:checked + .form__radio-custom:before {
   @media screen and (max-width: 768px) {
     .burgers__compound {
       top: -5%;
-      left: 5%; } }
+      left: 0%; } }
 
 .burgers__compound-svg {
   width: 2.875rem;
@@ -1395,12 +1405,12 @@ input[type="radio"]:checked + .form__radio-custom:before {
 
 .burggers__nutrition {
   position: absolute;
-  bottom: -10%;
+  bottom: 0%;
   left: 5%; }
   @media screen and (max-width: 768px) {
     .burggers__nutrition {
       position: absolute;
-      top: 5%;
+      top: -5%;
       right: 0%; } }
 
 .burggers__nutrition-wrapper {
@@ -1410,6 +1420,11 @@ input[type="radio"]:checked + .form__radio-custom:before {
   position: relative;
   opacity: 0.5;
   padding-left: 0.75rem; }
+  @media screen and (max-width: 768px) {
+    .burggers__nutrition-wrapper {
+      position: absolute;
+      top: 0%;
+      right: 5%; } }
 
 .burgers__nutrition-number {
   position: absolute;
@@ -1435,22 +1450,22 @@ input[type="radio"]:checked + .form__radio-custom:before {
   font-size: 0.8125rem;
   margin-left: 0.9375rem; }
 
-.burgers__arrow-left, .burgers__arrow-right {
-  position: absolute;
-  width: 1.625rem;
-  height: 2.4375rem;
-  fill: #fff;
-  z-index: 10;
-  cursor: pointer; }
+.burgers__arrow-img {
+  height: 0.75rem;
+  fill: #fff; }
 
 .burgers__arrow-left {
-  top: 45%;
-  left: -1.5%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
   transform: rotate(90deg); }
 
 .burgers__arrow-right {
-  top: 45%;
-  right: -9%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0%;
   transform: rotate(-90deg); }
 
 /*# sourceMappingURL=main.css.map */
