@@ -10,12 +10,12 @@
   
   @include tablets {
     flex-direction: column;
-    padding: 0 15%;
+    // padding: 0 15%;
   }
 }
 
 .about__left, .about__right {
-  width: 49%;
+  width: 100%;
 
   @include tablets {
     float: none;

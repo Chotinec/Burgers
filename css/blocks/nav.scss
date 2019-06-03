@@ -8,13 +8,15 @@
 .nav__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav__item {
   margin-right: rem(16px);
   display: flex;
   align-items: center;
-
+  
   &:after {
     content: "";
     display: block;
