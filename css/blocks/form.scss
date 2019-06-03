@@ -176,3 +176,18 @@ input[type="radio"]:checked + .form__radio-custom:before {
     }
   }
 }
+
+.form__btn-cancel {
+  padding: rem(10px) rem(15px);
+  transition: all .3s;
+  background-color: transparent;
+  border: 2px solid #e35028;
+  font-weight: 400;
+  cursor: pointer;
+  outline: none;  
+  margin-left: rem(10px);
+
+  &:hover {
+    color: #e35028;
+  }
+}

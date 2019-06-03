@@ -3,6 +3,10 @@
   top: rem(90px);
   right: rem(52px);
   z-index: 90;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .points__link {

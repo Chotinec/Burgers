@@ -85,6 +85,10 @@
   opacity: 0.5;
   transition: .6s;
 
+  &:hover {
+    opacity: .8;
+  }
+
   @include tablets {
     top: -5%;
     left: 0%;

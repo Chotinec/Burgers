@@ -14,12 +14,35 @@
   right: 0;
   top: 0;
   bottom: 0;
+
+  @include phones {
+    justify-content: flex-end;
+    width: 100%;
+  }
 }
 
 .menu-acco__item {
   position: relative;
   display: flex;
   z-index: 40;
+
+  &.active {
+    @include phones {
+      z-index: 60;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .menu-acco__close {
+    @include phones {
+      display: block;
+    }
+  }
 }
 
 .menu-acco__bg {
@@ -93,8 +116,17 @@
   font-weight: 300;
   padding: 3.25rem 7.5rem 2.5rem 1.6875rem;
   line-height: rem(24px);
+  transition: transform 1s, opacity 3s;
 
   @include phones {
     padding: rem(25px) rem(15px);
   }
+}
+
+.menu-acco__close {
+  position: absolute;
+  z-index: 10;
+  right: 3%;
+  top: 3%;
+  display: none;
 }

@@ -1,5 +1,3 @@
-$(document).ready(function () {
-
   $('.header-menu-link').on('click', function (e) {
     e.preventDefault();
 
@@ -10,10 +8,13 @@ $(document).ready(function () {
     e.preventDefault();
     const scroll_el = $(this).attr("href");
   
-    _toggleClass();
+    if (scroll_el !== "#") {
+      $("html").animate({ scrollTop: $(scroll_el).offset().top }, 600, () => {
+        _toggleClass();
+      });
+    }
   });
 
-});
 
 const _toggleClass = () => {
   $('.fullscreen-menu').toggleClass('fullscreen-menu--active');
