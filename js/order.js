@@ -20,11 +20,7 @@ $(order).on('click', e => {
 
   if (validateForm(form)) {
     const xhr = new XMLHttpRequest();
-    fd = new FormData();
-
-    fd.append('name', form.elements.name);
-    fd.append('phone', form.elements.phone);
-    fd.append('comment', form.elements.comment);
+    fd = new FormData(form);
     fd.append('to', MAIL);
     
     xhr.responseType = 'json';
@@ -35,10 +31,10 @@ $(order).on('click', e => {
       if (xhr.status >= 400) {
         response = "Mail was not sent!"
       } else {
-        response = xhr.response;
+        response = xhr.response.message;
       }
       overlay.open();
-      overlay.setContent(response.message);
+      overlay.setContent(response);
     });
   } else {
     response = "Form data is not valid!";
