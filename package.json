@@ -1,0 +1,24 @@
+{
+  "name": "burgers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chotinec/Burgers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chotinec/Burgers/issues"
+  },
+  "homepage": "https://github.com/Chotinec/Burgers#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
