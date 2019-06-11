@@ -33,9 +33,22 @@ task("copy:html", () => {
   .pipe(reload({stream: true}));
 });
 
+task("copy:fonts", () => {
+  return src("src/fonts/**")
+  .pipe(dest("dist/fonts"))
+  .pipe(reload({stream: true}));
+});
+
+task("copy:images", () => {
+  return src("src/images/**")
+  .pipe(dest("dist/images"))
+  .pipe(reload({stream: true}));
+});
+
+
 const styles =[
   "node_modules/normalize.css/normalize.css",
-  "src/styles/main.scss"
+  "src/css/main.scss"
 ];
 
 task("styles", () => {
@@ -44,7 +57,7 @@ task("styles", () => {
   .pipe(concat('main.min.scss'))
   .pipe(sassGlob())
   .pipe(sass().on("error", sass.logError))
-  .pipe(px2rem())
+  //.pipe(px2rem())
   .pipe(
     gulpif(
       env === 'dev',
@@ -54,25 +67,25 @@ task("styles", () => {
   .pipe(gulpif(env === 'prod', gcmq()))
   .pipe(gulpif(env === 'prod', cleanCSS({compatibility: 'ie8'})))
   .pipe(gulpif(env === 'dev', sourcemaps.write()))
-  .pipe(dest("dist"))
+  .pipe(dest("dist/css"))
   .pipe(reload({stream: true}));
 });
 
 const libs = [
   "node_modules/jquery/dist/jquery.js",
-  "src/scripts/*.js"
+  "src/js/*.js"
 ];
 
 task('scripts', () => {
   return src (libs)
-  .pipe(sourcemaps.init())
+  .pipe(gulpif(env === 'dev', sourcemaps.init()))
   .pipe(concat('main.min.js', {newLine: ";"}))
   .pipe(babel({
     presets: ['@babel/env']
   }))
-  .pipe(uglify())
-  .pipe(sourcemaps.write())
-  .pipe(dest("dist"))
+  .pipe(gulpif(env === 'prod',uglify()))
+  .pipe(gulpif(env === 'dev', sourcemaps.write()))
+  .pipe(dest("dist/js"))
   .pipe(reload({stream: true}));
 });
 
@@ -107,24 +120,21 @@ task('server', () =>{
 });
 
 task('watch', () => {
-  watch('./src/styles/**/*.scss', series("styles"));
+  watch('./src/css/**/*.scss', series("styles"));
   watch('./src/*.html', series("copy:html"));
-  watch('./src/scripts/*.js', series("scripts"));
-  watch('./src/images/icons/*.svg', series("icons"));
+  watch('./src/js/*.js', series("scripts"));
+  watch('./src/images/icons/svg/*.svg', series("icons"));
 });
 
 
 
 
 task("default", 
-      series("clean", parallel("copy:html", "styles", "scripts"), 
+      series("clean", parallel("copy:html", "copy:fonts", "copy:images", "styles", "scripts"), 
       parallel('watch', 'server')
     )
 );
 
 task("build", 
-      series("clean", parallel("copy:html", "styles", "scripts"))
+      series("clean", parallel("copy:html", "copy:fonts", "copy:images", "styles", "scripts"))
 );
-
-
-

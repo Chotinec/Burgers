@@ -1,0 +1,270 @@
+.burgers {
+  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+}
+
+.burgers__content {
+  display: flex;
+  position: relative;
+
+  @include tablets {
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  @include phones {
+    padding: 0;
+  }
+}
+
+.burgers__left {
+  width: 53%;
+}
+
+.burgers__right  {
+  width: 43%;
+}
+
+.burgers__left, .burgers__right {
+
+  @include tablets {
+    width: 100%;
+    text-align: center;
+  }
+
+  @include phones {
+    padding: 0;
+  }
+}
+
+.burgers__left {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.burgers__right {
+  padding-top: 5%;
+  padding-left: 2%;
+}
+
+.burgers__pic {
+  padding-top: 10%;
+}
+
+.burgers__img {
+  max-width: 100%;
+  max-height: 100%;
+
+  @include phones {
+    max-width: 80%;
+  }
+}
+
+.burgers__description {
+  margin-top: 40px;
+  color: #ffffff;
+  font-size: rem(14px);
+  font-weight: 300;
+  line-height: rem(23.97px);
+}
+
+.burgers__compound {
+  position: absolute;
+  top: 0;
+  left: 6%;
+  width: rem(90px);
+  height: rem(90px);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #e35028;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0.5;
+  transition: .6s;
+
+  &:hover {
+    opacity: .8;
+
+    .burgers__list {
+      display: block;
+    }
+  }
+
+  @include tablets {
+    top: -5%;
+    left: 0%;
+
+    .burgers__close {
+      display: block;
+    }
+
+    // &:hover {
+    //   .burgers__list {
+    //     display: none;
+    //   }
+    // }
+  }
+}
+
+.burgers__compound-svg {
+  width: rem(46px);
+  height: rem(46px);
+  fill: #fff;
+}
+
+.burgers__nutrition-svg {
+  width: rem(60px);
+  height: rem(60px);
+  fill: #fff;
+}
+
+.burgers__compound-text, .burgers__nutrition-text {
+  color: #ffffff;
+  @include gagalin();
+  font-size: rem(14px);
+  font-weight: 400;
+}
+
+.burggers__nutrition {
+  position: absolute;
+  bottom: 0%;
+  left: 5%;
+
+  @include tablets {
+    position: absolute;
+    top: -5%;
+    right:0%;
+  }
+}
+
+.burggers__nutrition-wrapper {
+  font-size: rem(20px);
+  @include gagalin();
+  color: #fff;
+  position: relative;
+  opacity: 0.5;
+  padding-left: rem(12px);
+
+  @include tablets {
+    position: absolute;
+    top: 0%;
+    right:5%;
+  }
+}
+
+.burgers__nutrition-number {
+   position: absolute;
+   top: 30%;
+   left: 35%;
+}
+
+.burgers__nutrition-text {
+  position: absolute;
+  top: 85%;
+  left: 35%;
+}
+
+.burgers__price {
+  color: #e35028;
+  @include gagalin();
+  font-size: rem(30px);
+  margin-top: rem(10px);
+}
+
+.burgers__price--big {
+  font-size: rem(72px);
+}
+
+.burgers__button {
+  @include ubuntu(500);
+  font-size: rem(13px);
+  margin-left: rem(15px);
+}
+
+.burgers__arrow-img {
+  height: rem(12px);
+  fill: #fff;
+}
+
+.burgers__arrow-left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  transform: rotate(90deg);
+}
+
+.burgers__arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  transform: rotate(-90deg);
+}
+
+.burgers__list {
+  background-color: #ffffff;
+  position: absolute;
+  transform: translate(100%);
+  right: 0;
+  top: 0;
+  padding: rem(20px);
+  display: none;
+}
+
+.burgers__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: rem(5px);
+}
+
+.burger__pic {
+  width: rem(44px);
+  height: rem(44px);
+  fill: #e25028;
+  margin-right: rem(20px);
+}
+
+.burger__pic-yellow {
+  fill: #f7b94a;
+}
+
+.burger__pic-green {
+  fill: #8ac03e;
+}
+
+.burger__item-text, .burger__weight {
+  color: #2f3234;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-right:rem(80px);
+}
+
+.burger__weight {
+  font-weight: 300;
+  margin: 0;
+  text-align: right;
+
+  @include tablets {
+    margin-right: rem(80px);
+  }
+}
+
+.burgers__close {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  display: none;
+}
+
+.active {
+  // display: block;
+  .burgers__list {
+    display: block;
+  }
+}

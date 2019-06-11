@@ -1,0 +1,18 @@
+.arrow {
+  display: block;
+  width: rem(29px);
+  height: rem(14px);
+  position: absolute;
+  bottom: rem(40px);
+  left: 49%;
+  transition: .5s;
+
+
+  &.arrow__link-img {
+    fill: #FFF;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+   }
+}
