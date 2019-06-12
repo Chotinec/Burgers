@@ -15,6 +15,7 @@ const uglify = require('gulp-uglify');
 const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
 const gulpif = require('gulp-if');
+var ghPages = require('gulp-gh-pages');
 
 const env = process.env.NODE_ENV;
 
@@ -138,3 +139,8 @@ task("default",
 task("build", 
       series("clean", parallel("copy:html", "copy:fonts", "copy:images", "styles", "scripts"))
 );
+
+task('deploy', function() {
+  return src('./dist/**/*')
+    .pipe(ghPages());
+});
