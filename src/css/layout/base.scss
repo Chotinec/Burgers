@@ -1,0 +1,145 @@
+html {
+  font-size: 16px;
+
+  @include tablets {
+    font-size: 15px;
+  }
+
+  @include phones {
+    font-size: 13px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+ @include ubuntu();
+  font-family: "Ubuntu", serif, Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.42;
+  color: $black;
+  font-size: rem(16px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+textarea {
+  outline: none;
+  border-radius: rem(5px);
+}
+
+input:focus,
+textarea:focus {
+  border:  rem(1px) solid #f9b43b;
+}
+
+
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: rem(1px);
+  width: rem(1px);
+  margin: rem(-1px);
+  padding: 0;
+  border: 0;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+  // will-change: transform;
+}
+
+.container {
+  max-width: rem(940px);
+  width: 95%; 
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+}
+
+.section {
+  position: relative;
+  height: 100%;
+  min-height: rem(650px);
+}
+
+.btn-custom {
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: rem(13px);
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: rem(4px);
+}
+
+.hidden {
+  overflow: hidden;
+}
